@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Before executing suite at the begin Default suite]]>
+    </line>
+    <line>
+      <![CDATA[Before executing test method once onlyDefault test]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : AgentDetailsPageTest.classIntialize]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : AgentDetailsPageTest.classIntialize]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : AgentDetailsPageTest.verifyAgentDetails]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : AgentDetailsPageTest.verifyAgentDetails]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : AgentDetailsPageTest.tearDown]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : AgentDetailsPageTest.tearDown]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="89826" started-at="2019-04-16T13:33:43Z" finished-at="2019-04-16T13:35:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="89826" started-at="2019-04-16T13:33:43Z" finished-at="2019-04-16T13:35:13Z">
+      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
+        <test-method status="PASS" signature="classIntialize()[pri:0, instance:com.zoopla.qa.testcase.AgentDetailsPageTest@77cd7a0]" name="classIntialize" is-config="true" duration-ms="88640" started-at="2019-04-16T13:33:43Z" finished-at="2019-04-16T13:35:12Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : AgentDetailsPageTest.classIntialize]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- classIntialize -->
+        <test-method status="PASS" signature="verifyAgentDetails()[pri:5, instance:com.zoopla.qa.testcase.AgentDetailsPageTest@77cd7a0]" name="verifyAgentDetails" duration-ms="263" started-at="2019-04-16T13:35:12Z" finished-at="2019-04-16T13:35:12Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : AgentDetailsPageTest.verifyAgentDetails]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : AgentDetailsPageTest.verifyAgentDetails]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyAgentDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.zoopla.qa.testcase.AgentDetailsPageTest@77cd7a0]" name="tearDown" is-config="true" duration-ms="851" started-at="2019-04-16T13:35:12Z" finished-at="2019-04-16T13:35:13Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : AgentDetailsPageTest.tearDown]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

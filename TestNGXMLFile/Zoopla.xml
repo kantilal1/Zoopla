@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+
+		<listener class-name="com.zoopla.qa.extendreport.ExtendReport" />
+		
+
+	</listeners>
+
+	<test thread-count="5"  name="Test">
+		<classes>
+			<class name="com.zoopla.qa.testcase.HomePageTest" />
+
+			<class name="com.zoopla.qa.testcase.PropertyPageTest" />
+			<class name="com.zoopla.qa.testcase.SalePageTest" />
+
+			<class name="com.zoopla.qa.testcase.AgentDetailsPageTest" />
+		</classes>
+
+	</test>
+</suite>
