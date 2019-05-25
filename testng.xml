@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Torenzo WebSite" verbose="1" parallel="none" thread-count="3">
+	
+
+  <test name="NaveenAutomation_24thApril">
+	    
+		<classes>
+
+			<class name="com.zoopla.qa.testcase.PracticeOne"/>
+			<class name="com.zoopla.qa.testcase.PracticeTwo" />
+
+			<!-- <class name="com.zoopla.qa.testcase.HomePageTest" /> <class name="com.zoopla.qa.testcase.PropertyPageTest" 
+				/> <class name="com.zoopla.qa.testcase.SalePageTest" /> <class name="com.zoopla.qa.testcase.AgentDetailsPageTest" 
+				/> -->
+		</classes> 
+
+	</test>
+</suite>
