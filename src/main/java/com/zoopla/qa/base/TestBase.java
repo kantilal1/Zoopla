@@ -37,9 +37,11 @@ public class TestBase {
 			System.out.println("prop loaded");
 
 		} else if (OSName.equalsIgnoreCase("Win")) {
+			System.out.println("In prop eles");
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(".\\src\\main\\java\\com\\zoopla\\qa\\config\\config.properties");
 			prop.load(fis);
+			System.out.println("In prop eles loaded");
 		}
 
 	}

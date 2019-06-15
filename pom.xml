@@ -62,12 +62,13 @@
 					</suiteXmlFiles>
 					<systemPropertyVariables>
 					<browserUse>${browser}</browserUse>
-					<testURL>${url}</testURL>
+					<testURL>${project.url}</testURL>
 					
 					</systemPropertyVariables>
 				</configuration>
 				
 			</plugin>
+			
 
 		</plugins>
 	</build>
