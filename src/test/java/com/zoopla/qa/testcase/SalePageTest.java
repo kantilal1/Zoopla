@@ -7,11 +7,12 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.zoopla.qa.base.TestBase;
 import com.zoopla.qa.pages.HomePage;
 import com.zoopla.qa.pages.SalePage;
-@Listeners(com.zoopla.qa.listener.Listener.class)
+
 public class SalePageTest extends TestBase{
 
 	
@@ -21,9 +22,10 @@ public class SalePageTest extends TestBase{
 	
 	SalePage salePage;
 	HomePage homePage;
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void classIntialize() throws IOException{
-		initialization();
+	public void classIntialize(String browser, String url) throws IOException{
+		initialization(browser, url);
 		 homePage =new HomePage();
 		 salePage =	new SalePage();
 		 homePage.passLocation();

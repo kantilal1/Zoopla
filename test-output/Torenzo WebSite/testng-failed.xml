@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Torenzo WebSite]" parallel="none">
+  <test name="NaveenAutomation_24thApril(failed)" parallel="none">
+    <classes>
+      <class name="com.zoopla.qa.testcase.PracticeOne">
+        <methods>
+          <include name="browserClose"/>
+          <include name="login1"/>
+          <include name="removeextension"/>
+          <include name="logoutPageTitle"/>
+          <include name="click1"/>
+          <include name="homePageTitle"/>
+          <include name="extension"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.PracticeOne -->
+      <class name="com.zoopla.qa.testcase.PracticeTwo">
+        <methods>
+          <include name="browserClose"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.PracticeTwo -->
+    </classes>
+  </test> <!-- NaveenAutomation_24thApril(failed) -->
+</suite> <!-- Failed suite [Torenzo WebSite] -->

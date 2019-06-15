@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.zoopla.qa.base.TestBase;
@@ -15,7 +16,7 @@ import com.zoopla.qa.pages.AgentDetailsPage;
 import com.zoopla.qa.pages.HomePage;
 import com.zoopla.qa.pages.PropertyPage;
 import com.zoopla.qa.pages.SalePage;
-@Listeners(com.zoopla.qa.listener.Listener.class)
+
 public class AgentDetailsPageTest extends TestBase {
 
 
@@ -26,9 +27,10 @@ public class AgentDetailsPageTest extends TestBase {
 	HomePage homePage;
 	PropertyPage propertyPage;
 	AgentDetailsPage agentDetailsPage;
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void classIntialize() throws IOException{
-		initialization();
+	public void classIntialize(String browser, String url) throws IOException{
+		initialization(browser, url);
 		 homePage =new HomePage();
 		 salePage =	new SalePage();
 		 propertyPage = new PropertyPage();
