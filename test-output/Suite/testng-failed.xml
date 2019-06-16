@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.zoopla.qa.extendreport.ExtendReport"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
+      <class name="com.zoopla.qa.testcase.HomePageTest">
         <methods>
+          <include name="verifyHomePageTitle"/>
+          <include name="searchLocation"/>
           <include name="classIntialize"/>
-          <include name="tearDown"/>
-          <include name="verifyAgentDetails"/>
         </methods>
-      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
+      </class> <!-- com.zoopla.qa.testcase.HomePageTest -->
       <class name="com.zoopla.qa.testcase.PropertyPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="agentDetails"/>
           <include name="classIntialize"/>
         </methods>
@@ -23,10 +19,16 @@
       <class name="com.zoopla.qa.testcase.SalePageTest">
         <methods>
           <include name="classIntialize"/>
+          <include name="verifyPropertyPageTitle"/>
           <include name="printPrice"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- com.zoopla.qa.testcase.SalePageTest -->
+      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
+        <methods>
+          <include name="classIntialize"/>
+          <include name="verifyAgentDetails"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

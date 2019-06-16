@@ -41,10 +41,9 @@ public class HandleIframe {
 		WebElement sortable = driver.findElement(By.xpath("//a[contains(text(), 'Sortable')]"));
 		sortable.click();
 		System.out.println("Switched and click on sortable");
-		
-<<<<<<< Updated upstream
+
 		System.out.println("Switching default page ");
-=======
+
 		System.out.println("Switching frame 1 ");
 		driver.switchTo().frame("iframe1");
 		WebElement blogs = driver
@@ -53,7 +52,7 @@ public class HandleIframe {
 				.get(1);
 		blogs.click();
 		System.out.println("switched and clicked on blogs");
->>>>>>> Stashed changes
+
 		driver.switchTo().defaultContent();
 		WebElement homeFromMainPage = driver.findElements(By.xpath("//nav[@class='navigation']//span[@class='menu-text'][contains(text(),'HOME')]")).get(0);
 		homeFromMainPage.click();
