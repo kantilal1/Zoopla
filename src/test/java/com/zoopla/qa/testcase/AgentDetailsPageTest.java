@@ -1,10 +1,12 @@
 package com.zoopla.qa.testcase;
 
 import java.io.IOException;
+
 import static com.zoopla.qa.testcase.PropertyPageTest.*;
 import static com.zoopla.qa.testdata.Constant.prop;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -27,10 +29,10 @@ public class AgentDetailsPageTest extends TestBase {
 	HomePage homePage;
 	PropertyPage propertyPage;
 	AgentDetailsPage agentDetailsPage;
-	@Parameters({"browser","url"})
+	@Parameters("browser")
 	@BeforeClass
-	public void classIntialize(String browser, String url) throws IOException{
-		initialization(browser, url);
+	public void classIntialize(String browser) throws IOException{
+		initialization(browser);
 		 homePage =new HomePage();
 		 salePage =	new SalePage();
 		 propertyPage = new PropertyPage();
@@ -52,8 +54,8 @@ public class AgentDetailsPageTest extends TestBase {
 		
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown(){
-		driver.quit();
+		driver.close();
 	}
 }

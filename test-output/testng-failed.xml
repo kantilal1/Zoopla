@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="FF"/>
+  <test name="FirefoxTestCase(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
     <classes>
+      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
+        <methods>
+          <include name="classIntialize"/>
+          <include name="verifyAgentDetails"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
+      <class name="com.zoopla.qa.testcase.PropertyPageTest">
+        <methods>
+          <include name="agentDetails"/>
+          <include name="classIntialize"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.PropertyPageTest -->
+      <class name="com.zoopla.qa.testcase.SalePageTest">
+        <methods>
+          <include name="classIntialize"/>
+          <include name="verifyPropertyPageTitle"/>
+          <include name="printPrice"/>
+        </methods>
+      </class> <!-- com.zoopla.qa.testcase.SalePageTest -->
       <class name="com.zoopla.qa.testcase.HomePageTest">
         <methods>
           <include name="verifyHomePageTitle"/>
@@ -11,5 +32,5 @@
         </methods>
       </class> <!-- com.zoopla.qa.testcase.HomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FirefoxTestCase(failed) -->
+</suite> <!-- Failed suite [Suite] -->

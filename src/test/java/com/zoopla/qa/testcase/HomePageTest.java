@@ -22,11 +22,12 @@ public class HomePageTest extends TestBase {
 	}
 
 	 HomePage homePage;
-	 @Parameters({"browser", "url"})
+	 
 	@BeforeClass
-	public void classIntialize(String browser , String url) throws IOException{
+	@Parameters("browser")
+	public void classIntialize(String browser) throws IOException{
 		
-		initialization(browser, url);
+		initialization(browser);
 		 homePage =new HomePage();
 		
 	}
@@ -43,10 +44,9 @@ public class HomePageTest extends TestBase {
 		homePage.passLocation();
 		homePage.clicOnSearch();
 	}
-
 	@AfterClass
 	public void tearDown(){
-		driver.quit();
+		driver.close();
 	}
 
 }

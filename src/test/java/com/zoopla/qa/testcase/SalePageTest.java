@@ -22,10 +22,10 @@ public class SalePageTest extends TestBase{
 	
 	SalePage salePage;
 	HomePage homePage;
-	@Parameters({"browser","url"})
+	@Parameters("browser")
 	@BeforeClass
-	public void classIntialize(String browser, String url) throws IOException{
-		initialization(browser, url);
+	public void classIntialize(String browser) throws IOException{
+		initialization(browser);
 		 homePage =new HomePage();
 		 salePage =	new SalePage();
 		 homePage.passLocation();
@@ -53,6 +53,6 @@ public class SalePageTest extends TestBase{
 	
 	@AfterClass
 	public void tearDown(){
-		driver.quit();
+		driver.close();
 	}
 }

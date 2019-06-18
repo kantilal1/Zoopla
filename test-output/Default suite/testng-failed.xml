@@ -7,7 +7,6 @@
         <methods>
           <include name="verifyHomePageTitle"/>
           <include name="searchLocation"/>
-          <include name="classIntialize"/>
         </methods>
       </class> <!-- com.zoopla.qa.testcase.HomePageTest -->
     </classes>

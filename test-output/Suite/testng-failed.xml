@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="FF"/>
+  <test name="FirefoxTestCase(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
     <classes>
-      <class name="com.zoopla.qa.testcase.HomePageTest">
+      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
         <methods>
-          <include name="verifyHomePageTitle"/>
-          <include name="searchLocation"/>
           <include name="classIntialize"/>
+          <include name="verifyAgentDetails"/>
         </methods>
-      </class> <!-- com.zoopla.qa.testcase.HomePageTest -->
+      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
       <class name="com.zoopla.qa.testcase.PropertyPageTest">
         <methods>
           <include name="agentDetails"/>
@@ -23,12 +24,13 @@
           <include name="printPrice"/>
         </methods>
       </class> <!-- com.zoopla.qa.testcase.SalePageTest -->
-      <class name="com.zoopla.qa.testcase.AgentDetailsPageTest">
+      <class name="com.zoopla.qa.testcase.HomePageTest">
         <methods>
+          <include name="verifyHomePageTitle"/>
+          <include name="searchLocation"/>
           <include name="classIntialize"/>
-          <include name="verifyAgentDetails"/>
         </methods>
-      </class> <!-- com.zoopla.qa.testcase.AgentDetailsPageTest -->
+      </class> <!-- com.zoopla.qa.testcase.HomePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- FirefoxTestCase(failed) -->
 </suite> <!-- Failed suite [Suite] -->

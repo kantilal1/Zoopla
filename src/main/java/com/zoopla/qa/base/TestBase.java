@@ -1,3 +1,4 @@
+
 package com.zoopla.qa.base;
 
 import java.io.FileInputStream;
@@ -7,20 +8,25 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static com.zoopla.qa.testdata.Constant.*;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.beust.jcommander.Parameter;
 
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
-	public static WebDriver driver;
+	public  WebDriver driver;
 
 	public TestBase() throws IOException {
 
@@ -41,13 +47,13 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream(".\\src\\main\\java\\com\\zoopla\\qa\\config\\config.properties");
 			prop.load(fis);
-			System.out.println("In prop eles loaded");
+		
 		}
 
 	}
 
 	
-	public static void initialization(String browser , String url) {
+	public void initialization(String browser) {
 
 		String browserName = prop.getProperty("browser");
 		System.out.println("prop loaded" +browserName);
@@ -57,8 +63,10 @@ public class TestBase {
 			driver = new ChromeDriver();
 
 		} else if (browser.equalsIgnoreCase("FF")) {
-			WebDriverManager.firefoxdriver().setup();
+			   
+	        WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			System.out.println("In prop eles loaded FF1");
 
 		} else if (browser.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().setup();
@@ -71,7 +79,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get("https://www.zoopla.co.uk/");
 
 	}
 }

@@ -26,10 +26,10 @@ public class PropertyPageTest extends TestBase{
 	SalePage salePage;
 	HomePage homePage;
 	PropertyPage propertyPage;
-	 @Parameters({"browser", "url"})
+	 @Parameters("browser")
 	@BeforeClass
-	public void classIntialize(String browser , String url) throws IOException{
-			initialization(browser, url);
+	public void classIntialize(String browser) throws IOException{
+			initialization(browser);
 		 homePage =new HomePage();
 		 salePage =	new SalePage();
 		 propertyPage = new PropertyPage();
@@ -55,7 +55,7 @@ public class PropertyPageTest extends TestBase{
 	}
 	@AfterClass
 	public void tearDown(){
-		driver.quit();
+		driver.close();
 	}
 
 }
