@@ -41,8 +41,18 @@ public class HandleIframe {
 		WebElement sortable = driver.findElement(By.xpath("//a[contains(text(), 'Sortable')]"));
 		sortable.click();
 		System.out.println("Switched and click on sortable");
-		
+
 		System.out.println("Switching default page ");
+
+		System.out.println("Switching frame 1 ");
+		driver.switchTo().frame("iframe1");
+		WebElement blogs = driver
+				.findElements(By
+						.xpath("//div[@id='page']//li[@class='menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27131 dt-mega-menu mega-auto-width mega-column-3']"))
+				.get(1);
+		blogs.click();
+		System.out.println("switched and clicked on blogs");
+
 		driver.switchTo().defaultContent();
 		WebElement homeFromMainPage = driver.findElements(By.xpath("//nav[@class='navigation']//span[@class='menu-text'][contains(text(),'HOME')]")).get(0);
 		homeFromMainPage.click();
