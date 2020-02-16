@@ -64,6 +64,18 @@
 					<!-- <systemPropertyVariables> <browserUse>${browser}</browserUse> <testURL>${project.url}</testURL> 
 						</systemPropertyVariables> -->
 				</configuration>
+				
+				 <configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>${TestNGXMLFile}</suiteXmlFile>
+					</suiteXmlFiles>
+					<systemPropertyVariables>
+					<browserUse>${browser}</browserUse>
+					<testURL>${project.url}</testURL>
+			
+					</systemPropertyVariables>
+				</configuration> 
+			</plugin>
 			</plugin>
 
 
